@@ -1,5 +1,7 @@
 # cordova-plugin-pm80-scanner
 Cordova Beam Scanner for Point Mobile PM80
+Modified by Garixi 
+Introducing SCAN MODE
 
 # Install
 
@@ -68,6 +70,20 @@ cordova.plugins.pm80scanner.setTriggerMode(mode);
 // cordova.plugins.pm80scanner.TRIGGER_MODE.ONESHOT
 // cordova.plugins.pm80scanner.TRIGGER_MODE.AUTO
 // cordova.plugins.pm80scanner.TRIGGER_MODE.CONTINUOUS
+
+```
+
+### 5. Set Scan Mode
+
+```javascript
+cordova.plugins.pm80scanner.setScanMode(mode);
+// Set scanner trigger mode.
+
+// Available modes are:
+// cordova.plugins.pm80scanner.SCAN_MODE.USER_MSG
+// cordova.plugins.pm80scanner.SCAN_MODE.KEYBOARD_MSG
+// cordova.plugins.pm80scanner.SCAN_MODE.CLIPBOARD
+// cordova.plugins.pm80scanner.SCAN_MODE.EVENT
 
 ```
 

@@ -24,7 +24,7 @@ public class PM80Scanner extends CordovaPlugin {
   private static CallbackContext callbackContext = null;
 
   static {
-    mScanner.aDecodeSetResultType(ScanConst.ResultType.DCD_RESULT_USERMSG);
+    mScanner.aDecodeSetResultType(ScanConst.ResultType.DCD_RESULT_COPYPASTE);
     mScanner.aDecodeSetTriggerMode(ScanConst.TriggerMode.DCD_TRIGGER_MODE_ONESHOT);
     // mScanner.aDecodeSetBeepEnable(0);   // 1 : on, 0 : off
   }
@@ -72,7 +72,10 @@ public class PM80Scanner extends CordovaPlugin {
         this.callbackContext = callbackContext;
       } else if (action.equals("triggerMode")) {
         mScanner.aDecodeSetTriggerMode(args.getInt(0));
-      } else if (action.equals("scan2")) {
+      }
+      else if (action.equals("scanMode")) {
+          mScanner.aDecodeSetResultType(args.getInt(0));
+      }else if (action.equals("scan2")) {
         mScanner.aDecodeSetTriggerOn(1);
       } else {
         return false;
