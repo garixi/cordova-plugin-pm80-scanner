@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-pm80-scanner.PM80Scanner", function (require, exports, module) {
+
   var exec = cordova.require("cordova/exec");
 
   /**
@@ -90,4 +90,4 @@ cordova.define("cordova-plugin-pm80-scanner.PM80Scanner", function (require, exp
   var pm80Scanner = new Pm80Scanner();
   module.exports = pm80Scanner;
 
-});
+
